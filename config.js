@@ -163,27 +163,26 @@ const THREAD_CONFIG = {
                               score: "-953 pts",
                               timeAgo: "15 hours ago",
                               content: `
-                                <p>It started up successfully.<br>
-                                Apparently, it launches using PrismLauncher.</p>
+                                <p>I hear some kind of voice...<br>
+                                It's in English...</p>
                               `,
                               image: {
                                 url: "image/2026-09-20_10.47.25.png"
                               },
                               replies: [
                                 {
-                                  author: "u/renai",
-                                  avatar: "OP",
-                                  avatarBg: "#00ff0dff",
-                                  role: "op",
-                                  roleBadgeText: "OP",
-                                  score: "-953 pts",
+                                  author: "u/Long-legged Steve",
+                                  avatar: "L",
+                                  avatarBg: "#00e1ffff",
+                                  role: "",
+                                  roleBadgeText: "",
+                                  score: "999999999999999999999999999998999999999999999999999910 pts",
                                   timeAgo: "15 hours ago",
                                   content: `
-                                    <p>I hear some kind of voice...<br>
-                                    It's in English...</p>
-                                  `,
+                                        <p>I don't understand Japanese.</p>
+                                      `,
                                   image: {
-                                    url: "image/2026-09-20_10.53.39.png"
+                                    url: "image/2026-09-20_10.49.44.png"
                                   },
                                   replies: [
                                     {
@@ -195,61 +194,44 @@ const THREAD_CONFIG = {
                                       score: "999999999999999999999999999998999999999999999999999910 pts",
                                       timeAgo: "15 hours ago",
                                       content: `
-                                        <p>I don't understand Japanese.</p>
-                                      `,
+                                            <p>Doesn't this setting seem pointless?</p>
+                                          `,
                                       image: {
-                                        url: "image/2026-09-20_10.49.44.png"
+                                        url: "image/2026-09-20_10.51.06.png"
                                       },
                                       replies: [
                                         {
-                                          author: "u/Long-legged Steve",
-                                          avatar: "L",
-                                          avatarBg: "#00e1ffff",
-                                          role: "",
-                                          roleBadgeText: "",
-                                          score: "999999999999999999999999999998999999999999999999999910 pts",
+                                          author: "u/renai",
+                                          avatar: "OP",
+                                          avatarBg: "#00ff0dff",
+                                          role: "op",
+                                          roleBadgeText: "OP",
+                                          score: "-953 pts",
                                           timeAgo: "15 hours ago",
                                           content: `
-                                            <p>Doesn't this setting seem pointless?</p>
-                                          `,
-                                          image: {
-                                            url: "image/2026-09-20_10.51.06.png"
-                                          },
-                                          replies: [
-                                            {
-                                              author: "u/renai",
-                                              avatar: "OP",
-                                              avatarBg: "#00ff0dff",
-                                              role: "op",
-                                              roleBadgeText: "OP",
-                                              score: "-953 pts",
-                                              timeAgo: "15 hours ago",
-                                              content: `
                                                 <p>It looks like a normal world, but that logo has been moving around and it's really annoying me.<br>
                                                 Also, it seems to move a little too fast.</p>
                                               `,
-                                              image: {
-                                                url: "image/2026-09-20_10.52.36.png"
-                                              },
-                                              replies: [
-                                                {
-                                                  author: "u/Long-legged Steve",
-                                                  avatar: "L",
-                                                  avatarBg: "#00e1ffff",
-                                                  role: "",
-                                                  roleBadgeText: "",
-                                                  score: "999999999999999999999999999998999999999999999999999910 pts",
-                                                  timeAgo: "15 hours ago",
-                                                  content: `
+                                          image: {
+                                            url: "image/2026-09-20_10.52.36.png"
+                                          },
+                                          replies: [
+                                            {
+                                              author: "u/Long-legged Steve",
+                                              avatar: "L",
+                                              avatarBg: "#00e1ffff",
+                                              role: "",
+                                              roleBadgeText: "",
+                                              score: "999999999999999999999999999998999999999999999999999910 pts",
+                                              timeAgo: "15 hours ago",
+                                              content: `
                                                     <p>It's unusual to see GPU information displayed.<br>
                                                     I wonder what the base model is.<br>
                                                     It'll reveal that I'm using an ARC B570.</p>
                                                   `,
-                                                  image: {
-                                                    url: "image/2026-09-20_10.55.50.png"
-                                                  },
-                                                }
-                                              ]
+                                              image: {
+                                                url: "image/2026-09-20_10.55.50.png"
+                                              },
                                             }
                                           ]
                                         }
@@ -260,51 +242,68 @@ const THREAD_CONFIG = {
                               ]
                             }
                           ]
-                        },
+                        }
                       ]
-                    }
+                    },
                   ]
                 }
               ]
             }
           ]
-        },
-        {
-          author: "u/fulllllllan",
-          avatar: "RF",
-          avatarBg: "",
-          role: "",
-          score: "270 pts",
-          timeAgo: "10 hours ago",
-          content: `
+        }
+      ]
+    },
+    {
+      author: "u/fulllllllan",
+      avatar: "RF",
+      avatarBg: "",
+      role: "",
+      score: "270 pts",
+      timeAgo: "10 hours ago",
+      content: `
             <p>The replies are getting a bit long, so I'll split it up here.<br>
             By the way, I've been wondering, are Long Legged Steve and renai the same person...?</p>
           `,
-          replies: [
-            {
-              author: "u/renai",
-              avatar: "OP",
-              avatarBg: "#00ff0dff",
-              role: "op",
-              roleBadgeText: "OP",
-              score: "-953 pts",
-              timeAgo: "15 hours ago",
-              content: `
+      replies: [
+        {
+          author: "u/renai",
+          avatar: "OP",
+          avatarBg: "#00ff0dff",
+          role: "op",
+          roleBadgeText: "OP",
+          score: "-953 pts",
+          timeAgo: "15 hours ago",
+          content: `
                 <p>Oops, that's enough.<br>
                 ...Wait...?</p>
               `,
-              replies: [
-                {
-                  author: "u/Long-legged Steve",
-                  avatar: "L",
-                  avatarBg: "#00e1ffff",
-                  role: "",
-                  roleBadgeText: "",
-                  score: "999999999999999999999999999998999999999999999999999910 pts",
-                  timeAgo: "15 hours ago",
-                  content: `
+          replies: [
+            {
+              author: "u/Long-legged Steve",
+              avatar: "L",
+              avatarBg: "#00e1ffff",
+              role: "",
+              roleBadgeText: "",
+              score: "999999999999999999999999999998999999999999999999999910 pts",
+              timeAgo: "15 hours ago",
+              content: `
                     <p>...Wait...?</p>
                   `,
+              replies: [
+                {
+                  author: "u/renai",
+                  avatar: "OP",
+                  avatarBg: "#00ff0dff",
+                  role: "op",
+                  roleBadgeText: "OP",
+                  score: "-953 pts",
+                  timeAgo: "15 hours ago",
+                  content: `
+                        <p>More importantly, a one-eyed Steve just appeared, and something came out!</p>
+                      `,
+                  image: {
+                    url: "image/2026-09-20_11.02.56.png"
+                  },
                   replies: [
                     {
                       author: "u/renai",
@@ -315,52 +314,53 @@ const THREAD_CONFIG = {
                       score: "-953 pts",
                       timeAgo: "15 hours ago",
                       content: `
-                        <p>More importantly, a one-eyed Steve just appeared, and something came out!</p>
-                      `,
+                            <p>Wow, what is this?</p>
+                          `,
                       image: {
-                        url: "image/2026-09-20_11.02.56.png"
+                        url: "image/2026-09-20_11.05.10.png"
                       },
                       replies: [
                         {
-                          author: "u/renai",
-                          avatar: "OP",
-                          avatarBg: "#00ff0dff",
-                          role: "op",
-                          roleBadgeText: "OP",
+                          author: "u/Marisansan",
+                          avatar: "M",
+                          avatarBg: "#e5ff00ff",
+                          role: "",
+                          roleBadgeText: "",
                           score: "-953 pts",
                           timeAgo: "15 hours ago",
                           content: `
-                            <p>Wow, what is this?</p>
-                          `,
-                          image: {
-                            url: "image/2026-09-20_11.05.10.png"
-                          },
-                          replies: [
-                            {
-                              author: "u/Marisansan",
-                              avatar: "M",
-                              avatarBg: "#e5ff00ff",
-                              role: "",
-                              roleBadgeText: "",
-                              score: "-953 pts",
-                              timeAgo: "15 hours ago",
-                              content: `
                                 <p>This is an advertisement.<br>You can see for yourself.</p>
                               `,
-                              replies: [
-                                {
-                                  author: "u/long_legged_Steve",
-                                  avatar: "L",
-                                  avatarBg: "#00e1ffff",
-                                  role: "",
-                                  roleBadgeText: "",
-                                  score: "999999999999999999999999999998999999999999999999999910 pts",
-                                  timeAgo: "15 hours ago",
-                                  content: `
+                          replies: [
+                            {
+                              author: "u/long_legged_Steve",
+                              avatar: "L",
+                              avatarBg: "#00e1ffff",
+                              role: "",
+                              roleBadgeText: "",
+                              score: "999999999999999999999999999998999999999999999999999910 pts",
+                              timeAgo: "15 hours ago",
+                              content: `
                                     <p>A strange cow appeared and I got something, what is this?</p>
                                   `,
+                              image: {
+                                url: "image/2026-09-20_11.07.20.png"
+                              },
+                              replies: [
+                                {
+                                  author: "u/renai",
+                                  avatar: "OP",
+                                  avatarBg: "#00ff0dff",
+                                  role: "op",
+                                  roleBadgeText: "OP",
+                                  score: "-952 pts",
+                                  timeAgo: "15 hours ago",
+                                  content: `
+                                        <p>Whoa... this is bad...</p>
+                                        <p>Would TEMU really do something like that...?</p>
+                                      `,
                                   image: {
-                                    url: "image/2026-09-20_11.07.20.png"
+                                    url: "image/image.png"
                                   },
                                   replies: [
                                     {
@@ -372,41 +372,49 @@ const THREAD_CONFIG = {
                                       score: "-952 pts",
                                       timeAgo: "15 hours ago",
                                       content: `
-                                        <p>Whoa... this is bad...</p>
-                                        <p>Would TEMU really do something like that...?</p>
-                                      `,
+                                            <p>???</p>
+                                          `,
                                       image: {
-                                        url: "image/image.png"
+                                        url: "image/image0.png"
                                       },
                                       replies: [
                                         {
-                                          author: "u/renai",
-                                          avatar: "OP",
-                                          avatarBg: "#00ff0dff",
-                                          role: "op",
-                                          roleBadgeText: "OP",
-                                          score: "-952 pts",
-                                          timeAgo: "15 hours ago",
+                                          author: "u/fulllllllan",
+                                          avatar: "RF",
+                                          avatarBg: "",
+                                          role: "",
+                                          score: "270 pts",
+                                          timeAgo: "10 hours ago",
                                           content: `
-                                            <p>???</p>
-                                          `,
-                                          image: {
-                                            url: "image/image0.png"
-                                          },
-                                          replies: [
-                                            {
-                                              author: "u/fulllllllan",
-                                              avatar: "RF",
-                                              avatarBg: "",
-                                              role: "",
-                                              score: "270 pts",
-                                              timeAgo: "10 hours ago",
-                                              content: `
                                                 <p>That's great!</p>
                                               `,
+                                          replies: [
+                                            {
+                                              author: "u/renai",
+                                              avatar: "OP",
+                                              avatarBg: "#00ff0dff",
+                                              role: "op",
+                                              roleBadgeText: "OP",
+                                              score: "-952 pts",
+                                              timeAgo: "15 hours ago",
+                                              content: `
+                                                    <p>Huh?</p>
+                                                  `
+                                            },
+                                            {
+                                              author: "u/Long_legged_Steve",
+                                              avatar: "L",
+                                              avatarBg: "#00e1ffff",
+                                              role: "",
+                                              roleBadgeText: "",
+                                              score: "999999999999999999999999999989999999999999999999999910 pts",
+                                              timeAgo: "15 hours ago",
+                                              content: `
+                                                    <p>Huh?</p>
+                                                  `,
                                               replies: [
                                                 {
-                                                  author: "u/renai",
+                                                  author: "u/HakUreI ReImu",
                                                   avatar: "OP",
                                                   avatarBg: "#00ff0dff",
                                                   role: "op",
@@ -414,38 +422,53 @@ const THREAD_CONFIG = {
                                                   score: "-952 pts",
                                                   timeAgo: "15 hours ago",
                                                   content: `
-                                                    <p>Huh?</p>
-                                                  `
-                                                },
-                                                {
-                                                  author: "u/Long_legged_Steve",
-                                                  avatar: "L",
-                                                  avatarBg: "#00e1ffff",
-                                                  role: "",
-                                                  roleBadgeText: "",
-                                                  score: "999999999999999999999999999989999999999999999999999910 pts",
-                                                  timeAgo: "15 hours ago",
-                                                  content: `
-                                                    <p>Huh?</p>
-                                                  `,
-                                                  replies: [
-                                                    {
-                                                      author: "u/HakUreI ReImu",
-                                                      avatar: "OP",
-                                                      avatarBg: "#00ff0dff",
-                                                      role: "op",
-                                                      roleBadgeText: "OP",
-                                                      score: "-952 pts",
-                                                      timeAgo: "15 hours ago",
-                                                      content: `
                                                         <p>Huh?</p>
                                                       `
-                                                    }
-                                                  ]
                                                 }
                                               ]
                                             }
                                           ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      author: "u/Long-Legged-Steve",
+                                      avatar: "L",
+                                      avatarBg: "#00e1ffff",
+                                      role: "",
+                                      roleBadgeText: "",
+                                      score: "999999999999999999999999999989999999999999999999999910 pts",
+                                      timeAgo: "15 hours ago",
+                                      content: `
+                                            <p>This is bad.</p>
+                                          `,
+                                      image: {
+                                        url: "image/2026-09-20_11.10.06.png"
+                                      },
+                                      replies: [
+                                        {
+                                          author: "u/Marisansan",
+                                          avatar: "M",
+                                          avatarBg: "#ff0000ff",
+                                          role: "",
+                                          roleBadgeText: "",
+                                          score: "99999999999999999999999999999 pts",
+                                          timeAgo: "15 hours ago",
+                                          content: `
+                                                <p>Are they going to try to scam us with support?</p>
+                                              `
+                                        },
+                                        {
+                                          author: "u/Renai",
+                                          avatar: "R",
+                                          avatarBg: "#c20000ff",
+                                          role: "",
+                                          roleBadgeText: "",
+                                          score: "-10000 pts",
+                                          timeAgo: "15 hours ago",
+                                          content: `
+                                                <p>I should probably stop doing this...</p>
+                                              `
                                         },
                                         {
                                           author: "u/Long-Legged-Steve",
@@ -453,52 +476,11 @@ const THREAD_CONFIG = {
                                           avatarBg: "#00e1ffff",
                                           role: "",
                                           roleBadgeText: "",
-                                          score: "999999999999999999999999999989999999999999999999999910 pts",
+                                          score: "-10000 pts",
                                           timeAgo: "15 hours ago",
                                           content: `
-                                            <p>This is bad.</p>
-                                          `,
-                                          image: {
-                                            url: "image/2026-09-20_11.10.06.png"
-                                          },
-                                          replies: [
-                                            {
-                                              author: "u/Marisansan",
-                                              avatar: "M",
-                                              avatarBg: "#ff0000ff",
-                                              role: "",
-                                              roleBadgeText: "",
-                                              score: "99999999999999999999999999999 pts",
-                                              timeAgo: "15 hours ago",
-                                              content: `
-                                                <p>Are they going to try to scam us with support?</p>
-                                              `
-                                            },
-                                            {
-                                              author: "u/Renai",
-                                              avatar: "R",
-                                              avatarBg: "#c20000ff",
-                                              role: "",
-                                              roleBadgeText: "",
-                                              score: "-10000 pts",
-                                              timeAgo: "15 hours ago",
-                                              content: `
-                                                <p>I should probably stop doing this...</p>
-                                              `
-                                            },
-                                            {
-                                              author: "u/Long-Legged-Steve",
-                                              avatar: "L",
-                                              avatarBg: "#00e1ffff",
-                                              role: "",
-                                              roleBadgeText: "",
-                                              score: "-10000 pts",
-                                              timeAgo: "15 hours ago",
-                                              content: `
                                                 <p>I'd like others to verify this as well.</p>
                                               `
-                                            }
-                                          ]
                                         }
                                       ]
                                     }
@@ -519,7 +501,7 @@ const THREAD_CONFIG = {
       ]
     }
   ]
-};
+}
 
 // Export to window for browser access
 if (typeof window !== 'undefined') {
