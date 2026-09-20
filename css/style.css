@@ -642,15 +642,19 @@ blockquote.quote-reply {
 /* Inline images in comment */
 .comment-inline-media {
   margin-top: 12px;
-  max-width: 440px;
+  max-width: 580px;
+  width: 100%;
 }
 
 .comment-inline-media .media-frame {
-  max-height: 280px;
+  max-height: 420px;
 }
 
 .comment-inline-media img {
-  max-height: 280px;
+  max-height: 420px;
+  width: 100%;
+  object-fit: contain;
+  background: #0d0f12;
 }
 
 /* Collapsed State */
@@ -664,27 +668,46 @@ blockquote.quote-reply {
   color: var(--text-accent);
 }
 
-/* Nested Replies (Thread Indent Line) */
+/* Nested Replies (Flat Layout - No Right Drift) */
 .comment-replies {
-  margin-left: 20px;
-  padding-left: 18px;
-  border-left: 2px solid var(--thread-line);
-  margin-top: 12px;
+  margin-left: 0;
+  padding-left: 0;
+  border-left: none;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  transition: border-color 0.2s ease;
+  gap: 10px;
+  width: 100%;
 }
 
-.comment-replies:hover {
-  border-left-color: var(--thread-line-hover);
+/* 返信コメントは右にずらさず全幅を維持し、左ボーダーとリプライ矢印で返信を表現 */
+.comment-replies .comment-item {
+  width: 100%;
 }
 
-/* Deeper nesting adjustments */
+.comment-replies .comment-body-wrapper {
+  border-left: 3px solid var(--border-focus);
+  background: rgba(34, 38, 48, 0.5);
+}
+
+.comment-replies .comment-item.op-reply .comment-body-wrapper {
+  border-left: 3px solid #3b82f6;
+}
+
+.comment-replies .comment-header .comment-author-info::before {
+  content: "↳";
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-link);
+  margin-right: 2px;
+  display: inline-block;
+}
+
+/* Responsive adjustments */
 @media (max-width: 640px) {
   .comment-replies {
-    margin-left: 10px;
-    padding-left: 10px;
+    margin-left: 0;
+    padding-left: 0;
   }
   .op-card {
     padding: 20px 16px;
