@@ -1,412 +1,518 @@
 /**
  * ============================================================================
- * OVERTHREAD - Thread Configuration File
- * CreepyMinecraft Investigation Archive
+ * OVERTHREAD - Thread Configuration File (スレッド設定ファイル)
  * ============================================================================
+ * このファイルを編集するだけで、タイトル、本文、写真、会話（コメント）を
+ * 簡単にカスタマイズできます。HTMLを直接触る必要はありません。
+ * 
+ * ※ ローカルで index.html を直接ダブルクリックして開いても、
+ *   GitHub Pages にアップロードしても、どちらでも正常に動作します。
  */
 
 const THREAD_CONFIG = {
   // サイト全体の基本設定
   site: {
-    pageTitle: "[Archive] I found a cursed bootleg of Minecraft on a fake 'TEMU' site : r/CreepyMinecraft",
+    pageTitle: "[Archive] I found a version of Minecraft called TEMU! : r/CreepyMinecraft",
     archiveBadge: "CURATED ARCHIVE",
     threadId: "thread/283",
-    subTitle: "English Forum Digest • Investigation Log",
-    noticeBanner: "This thread is locked & archived. Replies and inputs are disabled.",
+    subTitle: "English Forum Digest",
+    noticeBanner: "This thread is locked & curated. Replies and inputs are disabled.",
     footerStatus: "Thread status: Archived • Read-Only",
-    footerSub: "r/CreepyMinecraft Curated Investigation Archive • Built with static HTML/CSS/JS for GitHub Pages."
+    footerSub: "Curated Forum Archive Template • Built with static HTML/CSS/JS for GitHub Pages."
   },
 
   // スレッド主（OP: Original Poster）の投稿データ
   thread: {
     subreddit: "r/CreepyMinecraft",
-    flair: "INVESTIGATION &bull; MALWARE / ARG",
+    flair: "OC • TEARDOWN",
     author: "u/renai",
-    timeAgo: "16 hours ago",
-    score: "3,842",
-    commentCount: "14 Screenshots &bull; Investigation Thread",
-    title: "I found a strange bootleg version of Minecraft called \"TEMU Edition\" on a clone site. Here is what happened when I actually booted it up...",
+    timeAgo: "14 hours ago",
+    score: "888",
+    commentCount: "5 Curated Comments",
+    title: "I found a version of Minecraft called TEMU!",
 
-    // 本文
+    // 本文（段落ごとに配列で指定）
     bodyParagraphs: [
-      "I was browsing weird knockoff game sites late last night and came across a Chinese landing page mimicking TEMU. It advertised a \"full version of Minecraft\" completely free for $0.",
-      "Out of pure curiosity, I downloaded the archive inside a sandboxed environment. The launcher branding and textures were completely off from the start..."
+      "I was browsing a Chinese website called TEMU and found this version of Minecraft for sale, so I bought it for $0! ​​It's this one..."
     ],
 
-    // メイン写真
+    // メイン写真（不要な場合は null に設定可能）
     mainImage: {
       url: "image/2026-09-20_10.23.12.png",
-      alt: "TEMU Minecraft Title & Launcher Screen",
-      caption: "Fig 1.1: The custom boot splash & launcher interface titled 'Minecraft TEMU Edition'."
+      alt: "TEMU Minecraft",
+      caption: "TEMU Minecraft"
     },
 
-    quote: "WARNING: Do NOT run unknown jar/exe files from untrusted download pages without proper VM isolation.",
+    // 引用テキスト（不要な場合は null または空文字）
+    quote: null,
 
+    // サブ写真ギャラリー（複数枚並べる画像。不要な場合は空配列 []）
     galleryImages: [],
 
-    conclusion: "Has anyone seen this specific bootleg distribution before? Is this an elaborate ARG, or something far worse? Check out the discussion and screenshots below."
+    // 本文の締めくくり段落
+    conclusion: "Could someone look into this version further?"
   },
 
-  // コメント・会話ストリーム（親コメントで話題を分け、自然な2〜3階層の会話ツリーに整理）
+  // コメント・会話ストリーム（再帰的に何階層でも返信 replies をネストできます）
   comments: [
-    // ------------------------------------------------------------------------
-    // TOPIC 1: サイトの検証と偽ドメインのツッコミ
-    // ------------------------------------------------------------------------
     {
-      author: "u/HakUreI_ReImu",
-      avatar: "HR",
-      avatarBg: "#831843",
-      role: "mod",
-      roleBadgeText: "MOD WARNING",
+      author: "u/HakUreI ReImu",
+      avatar: "Hello",
+      avatarBg: "#ff0000ff",
+      role: "", // "mod" | "op" | ""
+      roleBadgeText: "MOD PIN",
       isPinned: true,
-      score: "1,240 pts",
-      timeAgo: "15 hours ago",
+      score: "-10 pts",
+      timeAgo: "13 hours ago",
       content: `
-        <p><strong>Moderator Warning:</strong> Distributing unauthorized builds or modified client binaries violates Mojang's EULA. More importantly, bootlegs like this frequently contain remote access trojans (RATs).</p>
-        <p>Does anyone have the actual domain link so we can run a WHOIS and virustotal scan?</p>
+        <p>Um, isn't that against the rules? Isn't it against Minecraft's terms of service to distribute it that way?<br>
+        First, let me see the website.</p>
       `,
       image: null,
       replies: [
         {
           author: "u/Marisansan",
-          avatar: "MS",
-          avatarBg: "#854d0e",
-          role: "",
-          score: "2,410 pts",
+          avatar: "OP",
+          avatarBg: "#eeff00ff",
+          role: "op",
+          roleBadgeText: "OP",
+          score: "456484545844894156841584152849 pts",
           timeAgo: "15 hours ago",
           content: `
-            <p>Wait, is it this site right here...?</p>
-            <p><a href="https://yoncursedmc.github.io/Minecraft_Temu/" target="_blank" rel="noopener">https://yoncursedmc.github.io/Minecraft_Temu/</a></p>
-            <p>Bro, that's not even real TEMU 💀 It's hosted on a GitHub Pages domain disguised with TEMU banner assets. How did anyone fall for this? lol</p>
+            <p>Um, is it this site...?<br>
+            This site doesn't look like the real TEMU...<br>
+            <a href="https://yoncursedmc.github.io/Minecraft_Temu/">https://yoncursedmc.github.io/Minecraft_Temu/</a><br>
+            Can't you even tell the difference between the real thing and the fake???</p>
           `,
+          // コメント内のインライン写真
           image: null,
           replies: [
             {
               author: "u/fulllllllan",
-              avatar: "FL",
-              avatarBg: "#1e3a8a",
+              avatar: "RF",
+              avatarBg: "",
               role: "",
-              score: "890 pts",
-              timeAgo: "14 hours ago",
+              score: "270 pts",
+              timeAgo: "10 hours ago",
               content: `
-                <p>Look at the landing page. It's completely in Japanese with broken machine translations.</p>
+                <p>Isn't this not TEMU?<br>
+                I can't believe you'd think of buying it from a site like this.<br>
+                It's free though. lol </p>
               `,
               image: {
-                url: "image/2026-09-20 10.32.49.png",
-                alt: "Fake TEMU Minecraft download page",
-                caption: "Fig 1.2: The cloned download portal claiming to give away free Minecraft."
+                url: "image/2026-09-20 10.32.49.png"
               },
               replies: [
                 {
                   author: "u/renai",
                   avatar: "OP",
-                  avatarBg: "#166534",
+                  avatarBg: "#00ff0dff",
                   role: "op",
                   roleBadgeText: "OP",
-                  score: "650 pts",
-                  timeAgo: "14 hours ago",
+                  score: "-954 pts",
+                  timeAgo: "11 hours ago",
                   content: `
-                    <p>There was no English option at all. The entire checkout screen was hardcoded in Japanese, but the site was pretending to be an international discount portal.</p>
+                    <p>Is there no English version?<br>
+                    Why is it only available in Japanese?<br>
+                    Are they trying to deceive Japanese people?</p>
                   `,
                   image: {
-                    url: "image/2026-09-20 10.36.00.png",
-                    alt: "Japanese localized cart and pricing",
-                    caption: "Fig 1.3: $0 checkout dialogue with Japanese text."
+                    url: "image/2026-09-20 10.36.00.png"
                   },
-                  replies: []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-
-    // ------------------------------------------------------------------------
-    // TOPIC 2: 起動検証と異様なゲーム内挙動
-    // ------------------------------------------------------------------------
-    {
-      author: "u/Long-legged_Steve",
-      avatar: "LS",
-      avatarBg: "#0e7490",
-      role: "",
-      score: "3,120 pts",
-      timeAgo: "14 hours ago",
-      content: `
-        <p>Curiosity got the better of me so I grabbed the archive on a burner laptop.</p>
-        <p>It actually launches through a custom PrismLauncher instance, but the moment the title screen appears, there's this eerie distorted Chinese traditional music playing in a continuous loop. You can't even change the language or access normal options.</p>
-      `,
-      image: {
-        url: "image/2026-09-20_10.47.25.png",
-        alt: "PrismLauncher instance booting the modified client",
-        caption: "Fig 2.1: The custom instance launching under PrismLauncher."
-      },
-      replies: [
-        {
-          author: "u/renai",
-          avatar: "OP",
-          avatarBg: "#166534",
-          role: "op",
-          roleBadgeText: "OP",
-          score: "1,180 pts",
-          timeAgo: "13 hours ago",
-          content: `
-            <p>Wait, you got music? When I spawned in, I heard a faint whispered voice in English coming through the left audio channel...</p>
-          `,
-          image: {
-            url: "image/2026-09-20_10.53.39.png",
-            alt: "In-game screenshot with dark atmosphere",
-            caption: "Fig 2.2: World loading with abnormal atmospheric sounds."
-          },
-          replies: [
-            {
-              author: "u/Long-legged_Steve",
-              avatar: "LS",
-              avatarBg: "#0e7490",
-              role: "",
-              score: "780 pts",
-              timeAgo: "13 hours ago",
-              content: `
-                <p>Check the settings screen. Half the buttons do nothing, and the options menu has completely nonsensical sliders.</p>
-              `,
-              image: {
-                url: "image/2026-09-20_10.49.44.png",
-                alt: "Glitched options menu",
-                caption: "Fig 2.3: Glitched options configuration with corrupted Japanese strings."
-              },
-              replies: [
-                {
-                  author: "u/Long-legged_Steve",
-                  avatar: "LS",
-                  avatarBg: "#0e7490",
-                  role: "",
-                  score: "640 pts",
-                  timeAgo: "13 hours ago",
-                  content: `
-                    <p>Also look at the video settings page. None of the render distances work properly:</p>
-                  `,
-                  image: {
-                    url: "image/2026-09-20_10.51.06.png",
-                    alt: "Distorted video settings interface",
-                    caption: "Fig 2.4: Video settings interface with disabled toggle controls."
-                  },
-                  replies: []
+                  replies: [
+                    {
+                      author: "u/Long-legged Steve",
+                      avatar: "L",
+                      avatarBg: "#00e1ffff",
+                      role: "",
+                      roleBadgeText: "",
+                      score: "99999999999999999999999999999899999999999999999999999 pts",
+                      timeAgo: "16 hours ago",
+                      content: `
+                        <p>I downloaded it.<br>
+                        Did everyone else download it?<br>
+                        Actually, this site looks like a download site disguised as TEMU.<br>
+                        Isn't the person who made this crazy?</p>
+                      `,
+                      replies: [
+                        {
+                          author: "u/renai",
+                          avatar: "OP",
+                          avatarBg: "#00ff0dff",
+                          role: "op",
+                          roleBadgeText: "OP",
+                          score: "-953 pts",
+                          timeAgo: "15 hours ago",
+                          content: `
+                            <p>It started up successfully.<br>
+                            Apparently, it launches using PrismLauncher.
+                            There's some weird music playing.<br>
+                            Why is there Chinese music in a Japanese game?<br>
+                            I can't change the language.</p>
+                          `,
+                          image: {
+                            url: "image/2026-09-20_10.23.12.png"
+                          },
+                          replies: [
+                            {
+                              author: "u/renai",
+                              avatar: "OP",
+                              avatarBg: "#00ff0dff",
+                              role: "op",
+                              roleBadgeText: "OP",
+                              score: "-953 pts",
+                              timeAgo: "15 hours ago",
+                              content: `
+                                <p>It started up successfully.<br>
+                                Apparently, it launches using PrismLauncher.</p>
+                              `,
+                              image: {
+                                url: "image/2026-09-20_10.47.25.png"
+                              },
+                              replies: [
+                                {
+                                  author: "u/renai",
+                                  avatar: "OP",
+                                  avatarBg: "#00ff0dff",
+                                  role: "op",
+                                  roleBadgeText: "OP",
+                                  score: "-953 pts",
+                                  timeAgo: "15 hours ago",
+                                  content: `
+                                    <p>I hear some kind of voice...<br>
+                                    It's in English...</p>
+                                  `,
+                                  image: {
+                                    url: "image/2026-09-20_10.53.39.png"
+                                  },
+                                  replies: [
+                                    {
+                                      author: "u/Long-legged Steve",
+                                      avatar: "L",
+                                      avatarBg: "#00e1ffff",
+                                      role: "",
+                                      roleBadgeText: "",
+                                      score: "999999999999999999999999999998999999999999999999999910 pts",
+                                      timeAgo: "15 hours ago",
+                                      content: `
+                                        <p>I don't understand Japanese.</p>
+                                      `,
+                                      image: {
+                                        url: "image/2026-09-20_10.49.44.png"
+                                      },
+                                      replies: [
+                                        {
+                                          author: "u/Long-legged Steve",
+                                          avatar: "L",
+                                          avatarBg: "#00e1ffff",
+                                          role: "",
+                                          roleBadgeText: "",
+                                          score: "999999999999999999999999999998999999999999999999999910 pts",
+                                          timeAgo: "15 hours ago",
+                                          content: `
+                                            <p>Doesn't this setting seem pointless?</p>
+                                          `,
+                                          image: {
+                                            url: "image/2026-09-20_10.51.06.png"
+                                          },
+                                          replies: [
+                                            {
+                                              author: "u/renai",
+                                              avatar: "OP",
+                                              avatarBg: "#00ff0dff",
+                                              role: "op",
+                                              roleBadgeText: "OP",
+                                              score: "-953 pts",
+                                              timeAgo: "15 hours ago",
+                                              content: `
+                                                <p>It looks like a normal world, but that logo has been moving around and it's really annoying me.<br>
+                                                Also, it seems to move a little too fast.</p>
+                                              `,
+                                              image: {
+                                                url: "image/2026-09-20_10.52.36.png"
+                                              },
+                                              replies: [
+                                                {
+                                                  author: "u/Long-legged Steve",
+                                                  avatar: "L",
+                                                  avatarBg: "#00e1ffff",
+                                                  role: "",
+                                                  roleBadgeText: "",
+                                                  score: "999999999999999999999999999998999999999999999999999910 pts",
+                                                  timeAgo: "15 hours ago",
+                                                  content: `
+                                                    <p>It's unusual to see GPU information displayed.<br>
+                                                    I wonder what the base model is.<br>
+                                                    It'll reveal that I'm using an ARC B570.</p>
+                                                  `,
+                                                  image: {
+                                                    url: "image/2026-09-20_10.55.50.png"
+                                                  },
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                      ]
+                    }
+                  ]
                 }
               ]
             }
           ]
         },
         {
-          author: "u/renai",
-          avatar: "OP",
-          avatarBg: "#166534",
-          role: "op",
-          roleBadgeText: "OP",
-          score: "920 pts",
-          timeAgo: "13 hours ago",
-          content: `
-            <p>I finally got into an actual singleplayer world. At first glance it looks like a normal plains biome, but the TEMU watermark icon keeps drifting across the screen like a DVD screensaver. Plus the player sprint speed is noticeably too fast.</p>
-          `,
-          image: {
-            url: "image/2026-09-20_10.52.36.png",
-            alt: "In-game plains view with floating TEMU logo watermark",
-            caption: "Fig 2.5: In-game world with a drifting TEMU logo overlay."
-          },
-          replies: [
-            {
-              author: "u/Long-legged_Steve",
-              avatar: "LS",
-              avatarBg: "#0e7490",
-              role: "",
-              score: "850 pts",
-              timeAgo: "12 hours ago",
-              content: `
-                <p>When I opened the F3 debug screen, it showed hardware telemetry straight from my system... it literally printed out my Intel ARC B570 GPU in the overlay. What kind of modpack reads raw hardware IDs like that?!</p>
-              `,
-              image: {
-                url: "image/2026-09-20_10.55.50.png",
-                alt: "F3 debug screen revealing Intel Arc B570",
-                caption: "Fig 2.6: F3 overlay showing detailed hardware telemetry."
-              },
-              replies: []
-            }
-          ]
-        }
-      ]
-    },
-
-    // ------------------------------------------------------------------------
-    // TOPIC 3: 怪異（エンティティ）の出現と画面の崩壊
-    // ------------------------------------------------------------------------
-    {
-      author: "u/renai",
-      avatar: "OP",
-      avatarBg: "#166534",
-      role: "op",
-      roleBadgeText: "OP",
-      score: "4,210 pts",
-      timeAgo: "12 hours ago",
-      content: `
-        <p><strong>UPDATE: SOMETHING JUST SPAWNED.</strong></p>
-        <p>I was walking towards a birch forest and this one-eyed Steve entity suddenly appeared right in front of me! The moment I got close, my inventory opened automatically and items started getting swapped around.</p>
-      `,
-      image: {
-        url: "image/2026-09-20_11.02.56.png",
-        alt: "One-eyed Steve entity encounter in birch forest",
-        caption: "Fig 3.1: The one-eyed entity appearing directly in front of the player."
-      },
-      replies: [
-        {
-          author: "u/renai",
-          avatar: "OP",
-          avatarBg: "#166534",
-          role: "op",
-          roleBadgeText: "OP",
-          score: "2,980 pts",
-          timeAgo: "12 hours ago",
-          content: `
-            <p>Then two seconds later, this full-screen prompt hijacked my display... look at this:</p>
-          `,
-          image: {
-            url: "image/2026-09-20_11.05.10.png",
-            alt: "Advertisement popup overlay over game window",
-            caption: "Fig 3.2: Fullscreen ad banner hijacking the game viewport."
-          },
-          replies: [
-            {
-              author: "u/Marisansan",
-              avatar: "MS",
-              avatarBg: "#854d0e",
-              role: "",
-              score: "1,560 pts",
-              timeAgo: "11 hours ago",
-              content: `
-                <blockquote class="quote-reply">> Advertisement popup overlay</blockquote>
-                <p>It's invoking an embedded Chromium / CEF browser window inside the game process! It's literally pushing live ad banners and tracker redirects while you play.</p>
-              `,
-              image: null,
-              replies: []
-            }
-          ]
-        },
-        {
-          author: "u/Long-legged_Steve",
-          avatar: "LS",
-          avatarBg: "#0e7490",
+          author: "u/fulllllllan",
+          avatar: "RF",
+          avatarBg: "",
           role: "",
-          score: "3,340 pts",
-          timeAgo: "12 hours ago",
+          score: "270 pts",
+          timeAgo: "10 hours ago",
           content: `
-            <p>Dude... the exact same thing happened on my end, but with a cursed cow mob. It approached me, made a glitched audio screech, and forced an item into my hotbar.</p>
+            <p>The replies are getting a bit long, so I'll split it up here.<br>
+            By the way, I've been wondering, are Long Legged Steve and renai the same person...?</p>
           `,
-          image: {
-            url: "image/2026-09-20_11.07.20.png",
-            alt: "Deformed cow entity approaching player",
-            caption: "Fig 3.3: Deformed entity approaching player near water."
-          },
           replies: [
             {
               author: "u/renai",
               avatar: "OP",
-              avatarBg: "#166534",
+              avatarBg: "#00ff0dff",
               role: "op",
               roleBadgeText: "OP",
-              score: "2,190 pts",
-              timeAgo: "11 hours ago",
+              score: "-953 pts",
+              timeAgo: "15 hours ago",
               content: `
-                <p>Holy sh*t... my entire screen just artifacted into corrupted green and blue noise. This isn't just an ad mod. It's actively glitching out the graphics buffer!</p>
+                <p>Oops, that's enough.<br>
+                ...Wait...?</p>
               `,
-              image: {
-                url: "image/image.png",
-                alt: "Corrupted display artifacts and graphics glitch",
-                caption: "Fig 3.4: Complete graphical corruption of the game viewport."
-              },
               replies: [
                 {
-                  author: "u/renai",
-                  avatar: "OP",
-                  avatarBg: "#166534",
-                  role: "op",
-                  roleBadgeText: "OP",
-                  score: "1,870 pts",
-                  timeAgo: "11 hours ago",
+                  author: "u/Long-legged Steve",
+                  avatar: "L",
+                  avatarBg: "#00e1ffff",
+                  role: "",
+                  roleBadgeText: "",
+                  score: "999999999999999999999999999998999999999999999999999910 pts",
+                  timeAgo: "15 hours ago",
                   content: `
-                    <p>What the actual hell is this???</p>
+                    <p>...Wait...?</p>
                   `,
-                  image: {
-                    url: "image/image0.png",
-                    alt: "Distorted entity closeup and glitched overlay",
-                    caption: "Fig 3.5: Distorted camera view after entity interaction."
-                  },
-                  replies: []
+                  replies: [
+                    {
+                      author: "u/renai",
+                      avatar: "OP",
+                      avatarBg: "#00ff0dff",
+                      role: "op",
+                      roleBadgeText: "OP",
+                      score: "-953 pts",
+                      timeAgo: "15 hours ago",
+                      content: `
+                        <p>More importantly, a one-eyed Steve just appeared, and something came out!</p>
+                      `,
+                      image: {
+                        url: "image/2026-09-20_11.02.56.png"
+                      },
+                      replies: [
+                        {
+                          author: "u/renai",
+                          avatar: "OP",
+                          avatarBg: "#00ff0dff",
+                          role: "op",
+                          roleBadgeText: "OP",
+                          score: "-953 pts",
+                          timeAgo: "15 hours ago",
+                          content: `
+                            <p>Wow, what is this?</p>
+                          `,
+                          image: {
+                            url: "image/2026-09-20_11.05.10.png"
+                          },
+                          replies: [
+                            {
+                              author: "u/Marisansan",
+                              avatar: "M",
+                              avatarBg: "#e5ff00ff",
+                              role: "",
+                              roleBadgeText: "",
+                              score: "-953 pts",
+                              timeAgo: "15 hours ago",
+                              content: `
+                                <p>This is an advertisement.<br>You can see for yourself.</p>
+                              `,
+                              replies: [
+                                {
+                                  author: "u/long_legged_Steve",
+                                  avatar: "L",
+                                  avatarBg: "#00e1ffff",
+                                  role: "",
+                                  roleBadgeText: "",
+                                  score: "999999999999999999999999999998999999999999999999999910 pts",
+                                  timeAgo: "15 hours ago",
+                                  content: `
+                                    <p>A strange cow appeared and I got something, what is this?</p>
+                                  `,
+                                  image: {
+                                    url: "image/2026-09-20_11.07.20.png"
+                                  },
+                                  replies: [
+                                    {
+                                      author: "u/renai",
+                                      avatar: "OP",
+                                      avatarBg: "#00ff0dff",
+                                      role: "op",
+                                      roleBadgeText: "OP",
+                                      score: "-952 pts",
+                                      timeAgo: "15 hours ago",
+                                      content: `
+                                        <p>Whoa... this is bad...</p>
+                                        <p>Would TEMU really do something like that...?</p>
+                                      `,
+                                      image: {
+                                        url: "image/image.png"
+                                      },
+                                      replies: [
+                                        {
+                                          author: "u/renai",
+                                          avatar: "OP",
+                                          avatarBg: "#00ff0dff",
+                                          role: "op",
+                                          roleBadgeText: "OP",
+                                          score: "-952 pts",
+                                          timeAgo: "15 hours ago",
+                                          content: `
+                                            <p>???</p>
+                                          `,
+                                          image: {
+                                            url: "image/image0.png"
+                                          },
+                                          replies: [
+                                            {
+                                              author: "u/fulllllllan",
+                                              avatar: "RF",
+                                              avatarBg: "",
+                                              role: "",
+                                              score: "270 pts",
+                                              timeAgo: "10 hours ago",
+                                              content: `
+                                                <p>That's great!</p>
+                                              `,
+                                              replies: [
+                                                {
+                                                  author: "u/renai",
+                                                  avatar: "OP",
+                                                  avatarBg: "#00ff0dff",
+                                                  role: "op",
+                                                  roleBadgeText: "OP",
+                                                  score: "-952 pts",
+                                                  timeAgo: "15 hours ago",
+                                                  content: `
+                                                    <p>Huh?</p>
+                                                  `
+                                                },
+                                                {
+                                                  author: "u/Long_legged_Steve",
+                                                  avatar: "L",
+                                                  avatarBg: "#00e1ffff",
+                                                  role: "",
+                                                  roleBadgeText: "",
+                                                  score: "999999999999999999999999999989999999999999999999999910 pts",
+                                                  timeAgo: "15 hours ago",
+                                                  content: `
+                                                    <p>Huh?</p>
+                                                  `,
+                                                  replies: [
+                                                    {
+                                                      author: "u/HakUreI ReImu",
+                                                      avatar: "OP",
+                                                      avatarBg: "#00ff0dff",
+                                                      role: "op",
+                                                      roleBadgeText: "OP",
+                                                      score: "-952 pts",
+                                                      timeAgo: "15 hours ago",
+                                                      content: `
+                                                        <p>Huh?</p>
+                                                      `
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          author: "u/Long-Legged-Steve",
+                                          avatar: "L",
+                                          avatarBg: "#00e1ffff",
+                                          role: "",
+                                          roleBadgeText: "",
+                                          score: "999999999999999999999999999989999999999999999999999910 pts",
+                                          timeAgo: "15 hours ago",
+                                          content: `
+                                            <p>This is bad.</p>
+                                          `,
+                                          image: {
+                                            url: "image/2026-09-20_11.10.06.png"
+                                          },
+                                          replies: [
+                                            {
+                                              author: "u/Marisansan",
+                                              avatar: "M",
+                                              avatarBg: "#ff0000ff",
+                                              role: "",
+                                              roleBadgeText: "",
+                                              score: "99999999999999999999999999999 pts",
+                                              timeAgo: "15 hours ago",
+                                              content: `
+                                                <p>Are they going to try to scam us with support?</p>
+                                              `
+                                            },
+                                            {
+                                              author: "u/Renai",
+                                              avatar: "R",
+                                              avatarBg: "#c20000ff",
+                                              role: "",
+                                              roleBadgeText: "",
+                                              score: "-10000 pts",
+                                              timeAgo: "15 hours ago",
+                                              content: `
+                                                <p>I should probably stop doing this...</p>
+                                              `
+                                            },
+                                            {
+                                              author: "u/Long-Legged-Steve",
+                                              avatar: "L",
+                                              avatarBg: "#00e1ffff",
+                                              role: "",
+                                              roleBadgeText: "",
+                                              score: "-10000 pts",
+                                              timeAgo: "15 hours ago",
+                                              content: `
+                                                <p>I'd like others to verify this as well.</p>
+                                              `
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
-            }
-          ]
-        }
-      ]
-    },
-
-    // ------------------------------------------------------------------------
-    // TOPIC 4: サポート詐欺画面と緊急シャットダウン
-    // ------------------------------------------------------------------------
-    {
-      author: "u/Long-legged_Steve",
-      avatar: "LS",
-      avatarBg: "#0e7490",
-      role: "",
-      score: "4,620 pts",
-      timeAgo: "11 hours ago",
-      content: `
-        <p><strong>STOP RUNNING IT IMMEDIATELY.</strong></p>
-        <p>My desktop just got completely locked out by a fake Microsoft Security / Support scam overlay. It triggered external PowerShell commands in the background to hijack the browser window.</p>
-      `,
-      image: {
-        url: "image/2026-09-20_11.10.06.png",
-        alt: "Fake Microsoft support security alert scam popup",
-        caption: "Fig 4.1: The fake tech support lockout screen triggered after the game crashes."
-      },
-      replies: [
-        {
-          author: "u/Marisansan",
-          avatar: "MS",
-          avatarBg: "#854d0e",
-          role: "",
-          score: "2,840 pts",
-          timeAgo: "10 hours ago",
-          content: `
-            <p>A classic tech support scam ransomware payload! The "TEMU Minecraft" was just a trojan horse to bypass smartscreen and lure kids or creepypasta hunters into running unsigned Java binaries.</p>
-            <p><strong>DO NOT call the phone number on that screen!</strong> Kill the task via Task Manager or hard reboot into safe mode immediately.</p>
-          `,
-          image: null,
-          replies: []
-        },
-        {
-          author: "u/renai",
-          avatar: "OP",
-          avatarBg: "#166534",
-          role: "op",
-          roleBadgeText: "OP",
-          score: "2,150 pts",
-          timeAgo: "10 hours ago",
-          content: `
-            <p>I just killed the process tree via terminal and deleted the virtual machine container. That was genuinely terrifying.</p>
-            <p>Consider this thread a PSA: <strong>Do NOT download Minecraft from random clone sites, no matter how curious you are.</strong></p>
-          `,
-          image: null,
-          replies: [
-            {
-              author: "u/fulllllllan",
-              avatar: "FL",
-              avatarBg: "#1e3a8a",
-              role: "",
-              score: "1,120 pts",
-              timeAgo: "9 hours ago",
-              content: `
-                <p>Bro thought he was playing a cool creepypasta ARG and ended up getting a full tech support scam trojan lmao. Glad you ran it in a sandbox OP.</p>
-              `,
-              image: null,
-              replies: []
             }
           ]
         }
