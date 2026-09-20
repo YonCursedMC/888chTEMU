@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curated Forum Thread Archive</title>
+  <meta name="description" content="Curated overseas forum discussion thread and photo teardown archive. Read-only compilation of community analysis and findings.">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Curated Overseas Forum Thread Archive">
+  <meta property="og:description" content="Overseas forum discussion archive featuring detailed photos, technical breakdown, and community comments.">
+
+  <!-- Forum Stylesheet -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       TOP CURATOR BAR (Minimal sticky header for reading comfort)
+       ======================================================================== -->
+  <header class="forum-header">
+    <div class="forum-header-inner">
+      <div class="brand-section">
+        <div class="site-badge">
+          <span class="dot"></span>
+          <span id="render-site-badge">CURATED ARCHIVE</span>
+        </div>
+        <div class="site-title">
+          <span id="render-thread-id">thread/888</span>
+          <span class="sub" id="render-sub-title">&bull; English Forum Digest</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button type="button" class="action-btn" id="btn-font-size" title="Toggle reading font size">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h10M4 18h7"/>
+          </svg>
+          <span>Text Size</span>
+        </button>
+
+        <button type="button" class="action-btn" id="btn-share-link" title="Copy thread link">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+          </svg>
+          <span>Share</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN THREAD WRAPPER
+       ======================================================================== -->
+  <main class="thread-container">
+
+    <!-- Read-only status banner -->
+    <div class="archive-notice-bar">
+      <div class="notice-left">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+        </svg>
+        <span id="render-notice-banner">This thread is locked & curated. Replies and inputs are disabled.</span>
+      </div>
+      <span class="notice-tag">READ ONLY</span>
+    </div>
+
+    <!-- ======================================================================
+         ORIGINAL POST (OP) CARD (Rendered via config.js)
+         ====================================================================== -->
+    <article class="op-card" id="render-op-card">
+      <!-- Generated dynamically from config.js -->
+    </article>
+
+    <!-- ======================================================================
+         DISCUSSION / COMMENTS STREAM (Rendered via config.js)
+         ====================================================================== -->
+    <section class="discussion-section">
+      <div class="discussion-header">
+        <div class="discussion-title">
+          <span>Discussion Stream</span>
+        </div>
+        <div class="sort-info">
+          <span>Curated Community Conversation</span>
+        </div>
+      </div>
+
+      <div class="comment-stream" id="render-comments-stream">
+        <!-- Generated dynamically from config.js -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       FOOTER (Archive Notice & Zero-Input Reminder)
+       ======================================================================== -->
+  <footer class="forum-footer">
+    <div class="footer-content">
+      <div class="footer-lock-badge">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+        </svg>
+        <span id="render-footer-status">Thread status: Archived &bull; Read-Only</span>
+      </div>
+      <p class="footer-sub" id="render-footer-sub">
+        Curated Forum Archive Template &bull; Built with static HTML/CSS/JS for GitHub Pages.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       IMAGE LIGHTBOX MODAL (Vanilla JS Fullscreen View)
+       ======================================================================== -->
+  <div id="lightbox-modal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Expanded photo viewer">
+    <div class="lightbox-content">
+      <button type="button" class="lightbox-close-btn" id="lightbox-close" aria-label="Close image">&times;</button>
+      <img id="lightbox-img" src="" alt="Enlarged photo view">
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- 1. Load Data Configuration First -->
+  <script src="./config.js"></script>
+  <!-- 2. Run App Logic & Renderer -->
+  <script src="./js/app.js"></script>
+</body>
+</html>
